@@ -1,2 +1,8 @@
 #!/usr/bin/env bash
-echo Hello, World!
+source setup.sh
+while true
+do
+  echo -n "> "
+  read input
+  source "$TUSH_PATH/modules/$input.sh"
+done
