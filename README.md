@@ -15,7 +15,7 @@ Runs on UNIX-like operating system with `bash` installed. Tested on NixOS.
 Install dependencies of individual modules. A system for installing module dependencies is coming soon.
 For now, you have to check which dependencies the module needs.
 
-The base program does not have any dependencies besides [bash](https://www.gnu.org/software/bash/).
+The base program does not have any dependencies besides [bash](https://www.gnu.org/software/bash/) and the [GNU coreutils](https://www.gnu.org/software/coreutils/). These are pre-installed on distributions of GNU/Linux.
 
 ## Installation
 1. Clone the repository
@@ -38,10 +38,10 @@ Exit with Ctrl+C or whatever terminates the program on your setup.
 3. Setting up `tush` command alias
 To use tush like `tush <input>` instead of `/path/to/tu.sh <input>`, add this line to your .bashrc or .zshrc or similar:
 ```bash
-source /path/to/tush/core/setup.sh
+# Sets an alias in your shell so you can do tush <command> while you're in it
+alias tush='~/Downloads/tush/tu.sh'
 ```
-Replace /path/to/tush with the path where you cloned the repository.
-This will set up variables for tush and an alias called `tush` which points to the `tu.sh` script in the tush folder.
+Replace ~/Downloads/tush with the path to your tush folder (the folder containing the tush repository).
 
 ## Usage
 ```bash
