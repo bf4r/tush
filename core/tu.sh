@@ -8,7 +8,7 @@ source $SCRIPT_DIR/setup.sh
 # tush <module_name> <arguments>
 interpret() {
   local module_name=$1
-  module_file="$TUSH_PATH/modules/$module_name.sh"
+  module_file="$TUSH_PATH/modules/$module_name/main.sh"
   if [ -f $module_file ]; then
     # Execute the module script with arguments to tush
     source "$module_file" "$@"
