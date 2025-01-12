@@ -38,10 +38,10 @@ Exit with Ctrl+C or whatever terminates the program on your setup.
 3. Setting up `tush` command alias
 To use tush like `tush <input>` instead of `/path/to/tu.sh <input>`, add this line to your .bashrc or .zshrc or similar:
 ```bash
-# Sets an alias in your shell so you can do tush <command> while you're in it
-alias tush='~/Downloads/tush/tu.sh'
+source /path/to/tush/core/setup.sh
 ```
-Replace ~/Downloads/tush with the path to your tush folder (the folder containing the tush repository).
+Replace /path/to/tush with the path where you cloned the repository.
+This will set up variables for tush and an alias called `tush` which points to the `tu.sh` script in the tush folder.
 
 ## Usage
 ```bash
