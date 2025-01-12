@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-# Add unit tests here
+# Unit tests for <<MODULENAME>>
