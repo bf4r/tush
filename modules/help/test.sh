@@ -1,2 +1,7 @@
 #!/usr/bin/env bash
-# Unit tests for help
+
+if [ "$(tush help > /dev/null)" ]; then
+  echo "Success"
+else
+  echo "Failure"
+fi
