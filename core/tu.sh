@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
-source setup.sh
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+source $SCRIPT_DIR/setup.sh
+
 while true
 do
   echo -n "> "
