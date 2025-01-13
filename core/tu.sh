@@ -3,25 +3,21 @@ SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 source $SCRIPT_DIR/setup.sh
 
 aliasify() {
-    source $SCRIPT_DIR/aliases.sh
-    local cmd="${@:1}"
-    local last_cmd=""
+    source "$SCRIPT_DIR/aliases.sh"
+    local input="$*"
+    local first_word=$(echo "$input" | awk '{print $1}')
+    local rest_of_input=$(echo "$input" | awk '{$1=""; print $0}' | sed 's/^ *//')
     
-    # Keep replacing aliases until no more changes occur
-    while [ "$cmd" != "$last_cmd" ]; do
-        last_cmd="$cmd"
-        
-        local first_word=$(echo "$cmd" | awk '{print $1}')
-        local remaining=$(echo "$cmd" | cut -d' ' -f2- )
-        
-        if [ "${aliases[$first_word]}" ]; then
-            if [ -n "$remaining" ]; then
-                cmd="${aliases[$first_word]}"
-            fi
-        fi
-    done
+    if [ -z "$input" ]; then
+        return
+    fi
     
-    echo "$cmd"
+    # Find aliases until none exists
+    if [ -n "${aliases[$first_word]}" ]; then
+        aliasify "${aliases[$first_word]} $rest_of_input"
+    else
+        echo "$input"
+    fi
 }
 
 # $1 = module name
