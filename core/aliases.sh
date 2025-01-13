@@ -9,6 +9,6 @@ declare -A aliases=(
     ["w"]="wipe"
     ["cmds"]="list"
     ["aliasesf"]="bash $EDITOR $TUSH_PATH/core/aliases.sh"
-    ["ec"]="bash echo"
     ["alsf"]="aliasesf"
+    ["print"]="bash echo"
 )

@@ -3,7 +3,6 @@ SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 source $SCRIPT_DIR/setup.sh
 
 aliasify() {
-    source "$SCRIPT_DIR/aliases.sh"
     local input="$*"
     local first_word=$(echo "$input" | awk '{print $1}')
     local rest_of_input=$(echo "$input" | awk '{$1=""; print $0}' | sed 's/^ *//')
@@ -52,7 +51,7 @@ do
     read input
     if [ -z "$input" ]; then
         continue
-    elif [ "$input" = "exit" ]; then
+    elif [ "$input" = "q" ]; then
         break
     fi
     interpret $input
