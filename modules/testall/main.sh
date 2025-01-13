@@ -3,7 +3,7 @@ SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 source $SCRIPT_DIR/config.sh
 
 if [ $# == 1 ]; then
-  printf "%-20s %s\n" "MODULE" "STATUS"
+  printf "%-20s %s\n" "MODULE" "RESULT"
   printf "%-20s %s\n" "------" "------"
   
   for module in $(ls -d "$TUSH_PATH/modules"/* | sort); do
@@ -15,9 +15,9 @@ if [ $# == 1 ]; then
         $test_script_path > /dev/null
         exit_code="$?"
         if [ "$exit_code" == 0 ]; then
-          printf "%-20s %s\n" "$module_name" "Success"
+          printf "%-20s %s (%d)\n" "$module_name" "Success" "$exit_code"
         else
-          printf "%-20s %s\n" "$module_name" "Failure"
+          printf "%-20s %s (%d)\n" "$module_name" "Failed" "$exit_code"
         fi
       elif [ "$TUSHM_TESTALL_WARNING_MISSING_FILE" ]; then
         printf "%-20s %s\n" "$module_name" "Missing test.sh!"
