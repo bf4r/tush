@@ -6,10 +6,10 @@ if [ $# == 2 ]; then
   $test_script_path > /dev/null
   exit_code="$?"
   if [ "$exit_code" == 0 ]; then
-    echo "Success"
+    echo "Success ($exit_code)"
   else
-    echo "Failure"
+    echo "Failure ($exit_code)"
   fi
 else
-  echo "Too many arguments."
+  echo "Wrong number of arguments."
 fi
