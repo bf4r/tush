@@ -2,8 +2,29 @@
 Tush is a modular CLI multitool written fully in bash.
 ## About
 
-### Why?
-I'm learning git and bash, so I'm remaking an old project.
+### Quickstart
+1. Install [git](https://git-scm.com/downloads/linux) (you might have it already)
+2. Install [bash](https://www.gnu.org/software/bash/) (you probably have it)
+3. Run the following in your Linux terminal to install tush:
+```bash
+git clone https://github.com/bf4r/tush
+cd tush
+echo "alias tush='$(pwd)/tu.sh" >> ~/.bashrc
+source ~/.bashrc
+tush
+```
+To use it again later, use `tush` for interactive mode or `tush <command>` for one-time use.
+
+### Quick note
+You can move the created `tush` directory wherever you want.
+
+Feel free to explore the modules directory to see what is being run.
+
+### Help
+Inside tush interactive mode **or** prefixed with `tush`, you can run:
+- `list` to see a list of modules
+- `help` to see a list with short descriptions of what they do
+- `help <command>` to see the full help page for a command
 
 ### Purpose
 - Centralizing bash scripts
@@ -11,7 +32,7 @@ I'm learning git and bash, so I'm remaking an old project.
 - Pulling your own repo with your own modules to easily and instantly having them again anywhere you want
 
 ## Compatibility and requirements
-Runs on UNIX-like operating system with `bash` installed. Tested on NixOS.
+Runs on Linux-based operating systems with `bash` installed. Tested on NixOS.
 Install dependencies of individual modules. A system for installing module dependencies is coming soon.
 For now, you have to check which dependencies the module needs.
 
