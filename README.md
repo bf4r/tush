@@ -1,8 +1,7 @@
 # tush
 Tush is a modular CLI multitool written fully in bash.
-## About
 
-### Quickstart
+## Quickstart
 1. Install [git](https://git-scm.com/downloads/linux) (you might have it already)
 2. Install [bash](https://www.gnu.org/software/bash/) (you probably have it)
 3. Run the following in your Linux terminal to install tush:
@@ -15,16 +14,18 @@ tush
 ```
 To use it again later, use `tush` for interactive mode or `tush <command>` for one-time use.
 
-### Quick note
+## Quick note
 You can move the created `tush` directory wherever you want.
 
 Feel free to explore the modules directory to see what is being run.
 
-### Help
+## Help
 Inside tush interactive mode **or** prefixed with `tush`, you can run:
 - `list` to see a list of modules
 - `help` to see a list with short descriptions of what they do
 - `help <command>` to see the full help page for a command
+
+## About
 
 ### Purpose
 - Centralizing bash scripts
