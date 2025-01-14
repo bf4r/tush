@@ -6,6 +6,7 @@ AI_PROMPT="${@:2}"
 if [[ ! -v AI_API_KEY ]]; then
   echo "Set the variable \$AI_API_KEY to your OpenAI-compatible API's API key to use the llm module."
   echo "You also need jq if you haven't already installed it."
+  exit 1
 fi
 
 AI_RESPONSE=$(
