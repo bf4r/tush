@@ -34,8 +34,9 @@ Inside tush interactive mode **or** prefixed with `tush`, you can run:
 
 ## Compatibility and requirements
 Runs on Linux-based operating systems with `bash` installed. Tested on NixOS.
-Install dependencies of individual modules. A system for installing module dependencies is coming soon.
-For now, you have to check which dependencies the module needs.
+Install dependencies of individual modules.
+Dependencies (outside of Bash and GNU coreutils) for each module are listed in `deps.txt` inside the module folder. (e.g. [tush/modules/llm/deps.txt](https://github.com/bf4r/tush/tree/master/modules/llm/deps.txt))
+If the deps.txt file doesn't exist, no dependencies other than bash and GNU coreutils are required.
 
 The base program does not have any dependencies besides [bash](https://www.gnu.org/software/bash/) and the [GNU coreutils](https://www.gnu.org/software/coreutils/). These are pre-installed on distributions of GNU/Linux.
 
