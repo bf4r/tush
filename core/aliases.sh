@@ -11,4 +11,5 @@ declare -A aliases=(
     ["aliasesf"]="bash $EDITOR $TUSH_PATH/core/aliases.sh"
     ["alsf"]="aliasesf"
     ["print"]="bash echo"
+    ["newm"]="new-module"
 )
