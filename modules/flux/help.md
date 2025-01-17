@@ -1,13 +1,15 @@
 # flux
-Does something.
+Generates images using FLUX.1 using the Replicate API.
 
 ## Usage
 ```bash
-flux <required_arguments> [optional_arguments]
+flux <prompt>
 ```
 
 ## Configuration
 ```bash
-# This item configures the xyz option
-$TUSHM_FLUX_XYZ="abc"
+# Where the generated images are saved
+$TUSHM_FLUX_SAVE_PATH="$HOME/fluxgen"
+# Your replicate API key (token). Get one at https://replicate.com/account/api-tokens.
+$TUSHM_FLUX_API_KEY=""
 ```

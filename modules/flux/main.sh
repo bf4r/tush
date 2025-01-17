@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-source "$(dirname "$0")/config.sh"
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+source $SCRIPT_DIR/config.sh
 
 if [ -z "$TUSHM_FLUX_API_KEY" ]; then
     echo "Error: API token not set in config.sh"
@@ -11,7 +12,8 @@ mkdir -p "$TUSHM_FLUX_SAVE_PATH"
 
 timestamp=$(date +%Y%m%d_%H%M%S)
 
-# Make API request
+prompt=$(printf '%s' "$*" | jq -R -s '.')
+
 response=$(curl --silent --show-error https://api.replicate.com/v1/models/black-forest-labs/flux-schnell/predictions \
     --request POST \
     --header "Authorization: Bearer $TUSHM_FLUX_API_KEY" \
@@ -19,7 +21,7 @@ response=$(curl --silent --show-error https://api.replicate.com/v1/models/black-
     --header "Prefer: wait" \
     --data '{
         "input": {
-            "prompt": "black forest gateau cake spelling out the words \"FLUX SCHNELL\", tasty, food photography, dynamic shot"
+            "prompt": '"$prompt"'
         }
     }')
 
@@ -40,3 +42,4 @@ else
     echo "Error: Failed to download image"
     exit 1
 fi
+
