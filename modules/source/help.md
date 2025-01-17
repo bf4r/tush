@@ -1,13 +1,7 @@
 # source
-Does something.
+Runs a tush script.
 
 ## Usage
 ```bash
-source <required_arguments> [optional_arguments]
-```
-
-## Configuration
-```bash
-# This item configures the xyz option
-$TUSHM_SOURCE_XYZ="abc"
+source <script_path>
 ```

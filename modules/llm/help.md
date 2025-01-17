@@ -9,10 +9,5 @@ llm <prompt>
 ## Configuration
 ```bash
 # Set the model ID from https://openrouter.ai/models
-$TUSHM_LLM_MODEL="openai/gpt-4o-mini"
-```
-
-## Dependencies
-```
-jq
+TUSHM_LLM_MODEL="openai/gpt-4o-mini"
 ```

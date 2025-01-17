@@ -9,5 +9,5 @@ Does something.
 ## Configuration
 ```bash
 # This item configures the xyz option
-$TUSHM_<<MODULENAMEUPPER>>_XYZ="abc"
+TUSHM_<<MODULENAMEUPPER>>_XYZ="abc"
 ```

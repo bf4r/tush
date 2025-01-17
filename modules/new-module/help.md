@@ -9,7 +9,7 @@ new-module <module_name>
 ## Configuration
 ```bash
 # Specifies the path to copy the template module folder from
-$TUSHM_NEW_MODULE_TEMPLATE_PATH="$TUSH_PATH/templates/module"
+TUSHM_NEW_MODULE_TEMPLATE_PATH="$TUSH_PATH/templates/module"
 ```
 
 ## About templates

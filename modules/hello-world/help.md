@@ -9,5 +9,5 @@ hello-world
 ## Configuration
 ```bash
 # The message to print when running hello-world
-$TUSHM_HELLO_WORLD_MESSAGE="Hello, World!"
+TUSHM_HELLO_WORLD_MESSAGE="Hello, World!"
 ```
