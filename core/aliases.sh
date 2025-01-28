@@ -12,4 +12,5 @@ declare -A aliases=(
     ["alsf"]="aliasesf"
     ["print"]="bash echo"
     ["newm"]="new-module"
+    ["als"]="aliases"
 )
