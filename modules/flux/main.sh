@@ -12,7 +12,7 @@ mkdir -p "$TUSHM_FLUX_SAVE_PATH"
 
 timestamp=$(date +%Y%m%d_%H%M%S)
 
-prompt=$(printf '%s' "$*" | jq -R -s '.')
+prompt=$(printf '%s' "${@:2}" | jq -R -s '.')
 
 response=$(curl --silent --show-error https://api.replicate.com/v1/models/black-forest-labs/flux-schnell/predictions \
     --request POST \
